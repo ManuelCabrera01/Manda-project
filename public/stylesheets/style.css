@@ -12,6 +12,7 @@ a {
 }
 
 nav.navbar {
+  background-color : rgba(177, 135, 135, 0.67);
   box-shadow: 0px 4px 10px 0 rgba(22,22,22,0.08);
   margin-bottom: 0;
 }
@@ -36,6 +37,7 @@ nav.navbar {
 .nav > .li-logout {
   padding: 7px;
 }
+
 
 .btn-logout {
   color: black;
@@ -67,4 +69,12 @@ nav.navbar {
   color: black;
   padding: 15px;
   border: 0;
+}
+.form-control {
+  width: 80%;
+ height: 30px
+}
+.col-sm-6 {
+    width: 50%;
+    margin-top: 40px;
 }

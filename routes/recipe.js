@@ -27,4 +27,15 @@ router.post('/', ensureLoggedIn('/login'), (req, res, next) => {
      });
   });
 
+  router.get('/:id',(req, res, next) => {
+    recipe.findById(req.params.id, (err, recipe) => {
+      if (err){ return next(err); }
+
+      recipe.populate('_creator', (err, recipe) => {
+        if (err){ return next(err); }
+        return res.render('recipes/show', { recipe });
+      });
+    });
+  });
+
 module.exports = router;

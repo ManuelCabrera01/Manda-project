@@ -8,6 +8,8 @@ const RecipeSchema = new Schema({
   instructions  : { type: String, required: true },
   _creator      : { type: Schema.Types.ObjectId, ref: 'User', required: true },
   notes         : { type: Date, required: true },
+  imgUrl        : { type: String }
+
 });
 
 module.exports = mongoose.model('Recipe', RecipeSchema);

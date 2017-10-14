@@ -1,0 +1,61 @@
+!-- views/recipe/edit.ejs -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 centered-form">
+      <% if (typeof(errors) !== 'undefined'){ %>
+    <div class="alert alert-danger">
+      <ul>
+        <% for (let error in errors){ %>
+        <li><%= errors[error].message %></li>
+        <% } %>
+      </ul>
+  </div>
+        <% } %>
+      <form action="/recipe/<%= recipe._id %>" method="post">
+        <div class="form-group">
+          <label for="recipe">recipe</label>
+          <input type="text" name="recipe" class="form-control" value="<%= recipe.recipe %>">
+        </div>
+        <div class="form-group">
+          <label for="ingredients">Ingredients</label>
+          <input type="text" name=ingredients" class="form-control" value="<%= recipe.ingredients %>">
+        </div>
+        <div class="form-group">
+          <label for="instructions">Instructions</label>
+          <textarea
+            id="instructions"
+            name="instructions"
+            class="form-control">
+            <%= recipe.instructions %>
+          </textarea>
+        </div>
+        <!-- <div class="form-group">
+          <label for="category">Category</label><br>
+          <! <select name="category" id="category">
+            <% types.forEach((category) => { %>
+            <! This selects the recipe's category in the dropdown -->
+              <!-- <% if (category === recipe.category) { %>
+                <option
+                  selected
+                  type="text"
+                  value="<%= category %>"
+                  class="form-control">
+                <%= category %>
+                </option>
+              <% } else { %>
+                <option type="text" value="<%= category %>" class="form-control"><%= category %></option>
+              <% } %>
+            <%  }) %>
+          </select> -->
+        <!-- </div> -->
+        <!-- <div class="form-group">
+          <label for="deadline">Deadline</label>
+          <input type="date" name="deadline" class="form-control" value="<%= recipe.inputFormattedDate %>">
+        </div> -->
+        <div class="form-group">
+          <button type="submit">Update recipe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

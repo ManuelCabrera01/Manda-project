@@ -5,7 +5,7 @@ const { ensureLoggedIn }                    = require('connect-ensure-login');
 const { authorizeRecipe,checkOwnership }    = require('../middleware/recipe-authorization');
 
 // reden view that display the form that create new recipe
-router.get('/recipe', (req, res) => {
+router.get('/new', (req, res) => {
  res.render('recipe/new');
 });
 
@@ -21,7 +21,7 @@ router.post('/recipe', ensureLoggedIn('/login'), (req, res, next) => {
 
      newRecipe.save( (err) => {
        if (err) {
-         console.log("ERRROR: ", err);
+        //  console.log("ERRROR: ", err);
          res.render('recipe/new', { Recipe: newRecipe});
        } else {
          res.redirect(`/recipe/${newRecipe._id}`);
@@ -32,7 +32,7 @@ router.post('/recipe', ensureLoggedIn('/login'), (req, res, next) => {
   recipe.findById(req.params.id, (err, recipe) => {
     if (err)       { return next(err) }
     if (!recipe) { return next(new Error("404") ) }
-    return res.render('recipe/edit', { recipe, types: TYPES })
+    return res.render('recipe/edit', { recipe})
   });
 });
 
@@ -47,6 +47,7 @@ router.post('/:id', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) 
   };
   Recipe.findByIdAndUpdate(req.params.id, updates, (err, Recipe) => {
     if (err) {
+      console.log("unable to update");
       return res.render('recipe/edit', {
         Recipe,
         errors: recipe.errors
@@ -58,6 +59,7 @@ router.post('/:id', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) 
     return res.redirect(`/recipe/${recipe._id}`);
   });
 });
+
 
   router.get('/:id', checkOwnership, (req, res, next) => {
     Recipe.findById(req.params.id, (err, recipe) => {
@@ -71,3 +73,21 @@ router.post('/:id', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) 
   });
 
 module.exports = router;
+
+
+
+
+
+
+
+
+// router.post('/job/new', ensureLoggedIn(), upload.single('photo'), (req, res) => {
+//     const pic = new Picture ({
+//       name: req.body.name,
+//       pic_path: `/uploads/${req.file.filename}`,
+//       pic_name: req.body.picName
+//     })
+//     pic.save((err) => {
+//         res.redirect('/');
+//     });
+// });

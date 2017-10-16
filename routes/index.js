@@ -15,19 +15,18 @@ router.get('/', (req, res, next) => {
 
 const  upload = multer({ dest: './public/uploads/' });
 
-router
-.post('/upload', upload.single('photo'), function(req, res){
-
-  const pic = new Picture({
-    name: req.body.name,
-    pic_path: `/uploads/${req.file.filename}`,
-    pic_name: req.file.originalname
-  });
-
-  pic.save((err) => {
-      res.redirect('/');
-  });
-});
+// router.post('/upload', upload.single('photo'), function(req, res){
+//
+//   const pic = new Picture({
+//     name: req.body.name,
+//     pic_path: `/uploads/${req.file.filename}`,
+//     pic_name: req.file.originalname
+//   });
+//
+//   pic.save((err) => {
+//       res.redirect('/');
+//   });
+// });
 
 router.get('/', function(req, res, next) {
   Picture.find((err, pictures) => {

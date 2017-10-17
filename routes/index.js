@@ -1,10 +1,11 @@
 const express            = require('express');
 const router             = express.Router();
 const Recipe             = require('../models/recipe');
+const Kitchen             = require('../models/kitchen');
 const Picture            = require('../models/pictures');
-const multer             = require('multer');
+// const multer             = require('multer');
 
-router.get('/', (req, res, next) => {
+router.get('/profile', (req, res, next) => {
   Recipe
      .find({})
      .populate('_creator')
@@ -13,7 +14,17 @@ router.get('/', (req, res, next) => {
      });;
 });
 
-const  upload = multer({ dest: './public/uploads/' });
+router.get('/profile', (req, res, next) => {
+  Recipe
+     .find({})
+     .populate('chef')
+     .exec((err, recipe) => {
+       res.render('profile-page.ejs', { kitchen });
+     });;
+});
+
+
+// const  upload = multer({ dest: './public/uploads/' });
 
 // router.post('/upload', upload.single('photo'), function(req, res){
 //

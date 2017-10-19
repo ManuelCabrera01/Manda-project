@@ -100,7 +100,7 @@ passport.use('local-signup', new LocalStrategy(
 passport.use('local-login', new LocalStrategy((username, password, next) => {
   User.findOne({ username }, (err, user) => {
     if (err) {
-    console.log("theres an error dude...>>>>>>>>>>>>>");
+    // console.log("theres an error dude...>>>>>>>>>>>>>");
       return next(err);
     }
     if (!user) {

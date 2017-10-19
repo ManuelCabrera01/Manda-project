@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 centered-form">
-      <% if (typeof(errors) !== 'undefined'){ %>
+       <% if (typeof(errors) !== 'undefined'){ %>
     <div class="alert alert-danger">
       <ul>
         <% for (let error in errors){ %>
@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
           <label for="ingredients">Ingredients</label>
-          <input type="text" name=ingredients" class="form-control" value="<%= recipe.ingredients %>">
+          <input type="text" name="ingredients" class="form-control" value="<%= recipe.ingredients %>">
         </div>
         <div class="form-group">
           <label for="instructions">Instructions</label>
@@ -29,29 +29,6 @@
             <%= recipe.instructions %>
           </textarea>
         </div>
-        <!-- <div class="form-group">
-          <label for="category">Category</label><br>
-          <! <select name="category" id="category">
-            <% types.forEach((category) => { %>
-            <! This selects the recipe's category in the dropdown -->
-              <!-- <% if (category === recipe.category) { %>
-                <option
-                  selected
-                  type="text"
-                  value="<%= category %>"
-                  class="form-control">
-                <%= category %>
-                </option>
-              <% } else { %>
-                <option type="text" value="<%= category %>" class="form-control"><%= category %></option>
-              <% } %>
-            <%  }) %>
-          </select> -->
-        <!-- </div> -->
-        <!-- <div class="form-group">
-          <label for="deadline">Deadline</label>
-          <input type="date" name="deadline" class="form-control" value="<%= recipe.inputFormattedDate %>">
-        </div> -->
         <div class="form-group">
           <button type="submit">Update recipe</button>
         </div>
@@ -59,3 +36,27 @@
     </div>
   </div>
 </div>
+
+<!-- <div class="form-group">
+<label for="category">Category</label><br>
+<! <select name="category" id="category">
+<% types.forEach((category) => { %>
+<! This selects the recipe's category in the dropdown -->
+<!-- <% if (category === recipe.category) { %>
+<option
+selected
+type="text"
+value="<%= category %>"
+class="form-control">
+<%= category %>
+</option>
+<% } else { %>
+<option type="text" value="<%= category %>" class="form-control"><%= category %></option>
+<% } %>
+<%  }) %>
+</select> -->
+<!-- </div> -->
+<!-- <div class="form-group">
+<label for="deadline">Deadline</label>
+<input type="date" name="deadline" class="form-control" value="<%= recipe.inputFormattedDate %>">
+</div> -->

@@ -17,6 +17,7 @@ router.post('/recipe', ensureLoggedIn('/login'), (req, res, next) => {
      instructions : req.body.instructions,
      _creator     : req.user._id,
      notes        : req.body. notes
+
      });
 
      newRecipe.save( (err) => {
@@ -28,38 +29,6 @@ router.post('/recipe', ensureLoggedIn('/login'), (req, res, next) => {
        }
      });
   });
-  router.get('/:id/edit', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) => {
-  recipe.findById(req.params.id, (err, recipe) => {
-    if (err)       { return next(err) }
-    if (!recipe) { return next(new Error("404") ) }
-    return res.render('recipe/edit', { recipe})
-  });
-});
-
-router.post('/:id', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) => {
-  const updates = {
-    recipe       : req.body.recipe,
-    ingredients  : req.body.ingredients,
-    instructions : req.body.instructions,
-    _creator     : req.user._id,
-    notes        : req.body. notes
-
-  };
-  Recipe.findByIdAndUpdate(req.params.id, updates, (err, Recipe) => {
-    if (err) {
-      console.log("unable to update");
-      return res.render('recipe/edit', {
-        Recipe,
-        errors: recipe.errors
-      });
-    }
-    if (!Recipe) {
-      return next(new Error('404'));
-    }
-    return res.redirect(`/recipe/${recipe._id}`);
-  });
-});
-
 
   router.get('/:id', checkOwnership, (req, res, next) => {
     Recipe.findById(req.params.id, (err, recipe) => {
@@ -71,6 +40,42 @@ router.post('/:id', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) 
       });
     });
   });
+
+
+  router.get('/:id/edit', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) => {
+  recipe.findById(req.params.id, (err, recipe) => {
+    if (err)       { return next(err) }
+    if (!recipe) { return next(new Error("404") ) }
+    return res.render('recipe/edit', { recipe})
+  });
+});
+
+
+router.post('/:id', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) => {
+  const updates = {
+    recipe       : req.body.recipe,
+    ingredients  : req.body.ingredients,
+    instructions : req.body.instructions,
+    // _creator     : req.user._id,
+    notes        : req.body. notes
+
+  };
+  Recipe.findByIdAndUpdate(req.params.id, updates, (err, recipe) => {
+    if (err) {
+      console.log("unable to update");
+      return res.render('recipe/edit', {
+        recipe,
+        errors: recipe.errors
+      });
+    }
+    if (!recipe) {
+      return next(new Error('404'));
+    }
+    return res.redirect(`/recipe/${recipe._id}`);
+  });
+});
+
+
 
 module.exports = router;
 

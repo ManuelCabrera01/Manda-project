@@ -2,46 +2,52 @@ const express            = require('express');
 const router             = express.Router();
 const Recipe             = require('../models/recipe');
 const Kitchen             = require('../models/kitchen');
-const Picture            = require('../models/pictures');
+// const Picture            = require('../models/requestJOb');
 // const multer             = require('multer');
 
-router.get('/profile', (req, res, next) => {
+router.get('/', (req, res, next) => {
+  res.render('index');
+});
+
+router.get('/', (req, res, next) => {
   Recipe
      .find({})
      .populate('_creator')
      .exec((err, recipe) => {
-       res.render('index.ejs', { recipe });
+       res.render('index', { recipe });
      });;
 });
 
-router.get('/profile', (req, res, next) => {
-  Recipe
+router.get('/', (req, res, next) => {
+  Kitchen
      .find({})
      .populate('chef')
      .exec((err, recipe) => {
-       res.render('profile-page.ejs', { kitchen });
+       res.render('index.ejs', { kitchen });
      });;
 });
 
 
-// const  upload = multer({ dest: './public/uploads/' });
 
-// router.post('/upload', upload.single('photo'), function(req, res){
-//
-//   const pic = new Picture({
-//     name: req.body.name,
-//     pic_path: `/uploads/${req.file.filename}`,
-//     pic_name: req.file.originalname
-//   });
-//
-//   pic.save((err) => {
-//       res.redirect('/');
-//   });
+// router.get('/', function(req, res, next) {
+//   Picture.find((err, pictures) => {
+//     res.render('index', {pictures})
+//   })
 // });
 
-router.get('/', function(req, res, next) {
-  Picture.find((err, pictures) => {
-    res.render('index', {pictures})
-  })
-});
+
+// code for picture uipload
+
+
+
+
+// router.get('/', function(req, res, next) {
+//   Picture.find((err, requestJob) => {
+//     res.render('index', {requestJob})
+//   })
+// });
+
+
+
+
 module.exports = router;

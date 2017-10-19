@@ -1,6 +1,6 @@
 const express            = require('express');
 const path               = require('path');
-const favicon            = require('serve-favicon');
+// const favicon            = require('serve-favicon');
 const logger             = require('morgan');
 const cookieParser       = require('cookie-parser');
 const bodyParser         = require('body-parser');
@@ -22,7 +22,7 @@ const kitchenRoutes      = require('./routes/kitchen.js');
 
 mongoose.connect('mongodb://localhost:27017/Manda-development');
 
-var app = express();
+const app = express();
 
 
 
@@ -35,6 +35,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.set('layout', 'layouts/main-layout');
 app.use(expressLayouts);
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -124,6 +125,8 @@ app.use( (req, res, next) => {
   }
   next();
 })
+
+
 // all my routes
 
 app.use('/', index);

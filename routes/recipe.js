@@ -43,7 +43,7 @@ router.post('/recipe', ensureLoggedIn('/login'), (req, res, next) => {
 
 
   router.get('/:id/edit', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) => {
-  recipe.findById(req.params.id, (err, recipe) => {
+  Recipe.findById(req.params.id, (err, recipe) => {
     if (err)       { return next(err) }
     if (!recipe) { return next(new Error("404") ) }
     return res.render('recipe/edit', { recipe})
@@ -62,7 +62,7 @@ router.post('/:id', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) 
   };
   Recipe.findByIdAndUpdate(req.params.id, updates, (err, recipe) => {
     if (err) {
-      console.log("unable to update");
+      // console.log("unable to update");
       return res.render('recipe/edit', {
         recipe,
         errors: recipe.errors

@@ -2,7 +2,7 @@
 <div class="container recipe-container">
   <div class="row">
     <div class="col-sm-2">
-      <!-- <img src="https://vignette.wikia.nocookie.net/doom/images/4/4c/Chef-hat-png-13.png/revision/latest?cb=20170308012617"><br> -->
+      <img src="https://vignette.wikia.nocookie.net/doom/images/4/4c/Chef-hat-png-13.png/revision/latest?cb=20170308012617"><br>
       By: <strong><%= recipe._creator.username %></strong>
       <h1><%= recipe.recipe %></h1>
     </div>
@@ -13,9 +13,14 @@
     </div>
   </div>
   <div class="row">
-    <!-- <div class="col-sm-8">
-      <img class="recipe-image" src="<%= recipe.image %>">
-    </div> -->
+    <div class="row">
+   <div class="col-sm-8">
+     <img class="recipe-image" src="<%= recipe.image %>">
+   </div>
+   <% if (campaignIsCurrentUsers) { %>
+  <a  href="/campaigns/<%= campaign._id%>/edit">Edit This Project</a>
+<% } else { %>
+<% } %>
     <!-- <div class="col-sm-4 recipe-info">
       <div class="recipe-progress">
         <progress value="<%= recipe.totalPledged %>" max="<%= recipe.goal %>"></progress>

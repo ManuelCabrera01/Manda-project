@@ -5,9 +5,9 @@ const Kitchen             = require('../models/kitchen');
 // const Picture            = require('../models/requestJOb');
 // const multer             = require('multer');
 
-router.get('/', (req, res, next) => {
-  res.render('index');
-});
+// router.get('/', (req, res, next) => {
+//   res.render('index');
+// });
 
 router.get('/', (req, res, next) => {
   Recipe

@@ -10,7 +10,7 @@ function authorizeRecipe(req, res, next){
     if (recipe.belongsTo(req.user)){
         return next()
       } else {
-        return res.redirect(`/recipes/${recipe._id}`)
+        return res.redirect(`/recipe/${recipe._id}`)
       }
     });
 }

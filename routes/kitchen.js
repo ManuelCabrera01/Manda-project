@@ -1,6 +1,6 @@
 const express                   = require('express');
 const kitchen                   = require('../models/kitchen');
-const TYPES                     = require('../models/kitchen-types');
+// const TYPES                     = require('../models/kitchen-types');
 const router                    = express.Router();
 const { ensureLoggedIn }        = require('connect-ensure-login');
 

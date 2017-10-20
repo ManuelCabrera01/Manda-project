@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
+const TYPES    = require('./profession-types');
+
 
 const userSchema = new Schema({
   email       : String,
   username    : String,
   password    : String,
-  profession  : String,
-  imgUrl     : { type: String, default: "" }
+  profession  : { type: String, enum: TYPES, required: true },
+  imgUrl      : { type: String, default: "" }
 });
 
 const User = mongoose.model('User', userSchema);

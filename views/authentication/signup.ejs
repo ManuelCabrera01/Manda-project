@@ -11,15 +11,20 @@
           <input type="text" name="email" class="form-control">
         </div>
         <div class="form-group">
-          <label for="description">Profession</label>
-          <textarea name="description" class="form-control"></textarea>
-        </div>
+           <label for="profession">profession</label><br>
+           <select name="profession" id="profession">
+             <% types.forEach((profession) => { %>
+               <option type="text" value="<%= profession %>" class="form-control"><%= profession %></option>
+             <%  }) %>
+           </select>
         <div class="form-group">
           <label for="password">Password</label>
           <input type="password" name="password" class="form-control">
         </div>
         <div class="form-group">
           <button type="submit">Signup</button>
+
+
 <!-- picture upload
         <section>
           <form action="/upload" method="post" enctype="multipart/form-data">

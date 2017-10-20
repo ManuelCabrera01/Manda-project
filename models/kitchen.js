@@ -5,9 +5,10 @@ const Schema   = mongoose.Schema;
 const KitchenSchema = new Schema({
   kitchen            : String,
   _chef              : { type: Schema.Types.ObjectId, ref: 'User', required: true },
-  recipe             : String,
+  recipe             : [Schema.Types.ObjectId],
   menber             : [Schema.Types.ObjectId]
 });
+
 KitchenSchema.methods.belongsTo = function(user){
   return this._chef.equals(user._id);
 }

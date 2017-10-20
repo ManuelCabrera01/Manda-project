@@ -21,9 +21,9 @@ router.get('/', (req, res, next) => {
 router.get('/', (req, res, next) => {
   Kitchen
      .find({})
-     .populate('chef')
-     .exec((err, recipe) => {
-       res.render('index.ejs', { kitchen });
+     .populate('_chef')
+     .exec((err, kitchen) => {
+       res.render('index', { kitchen });
      });;
 });
 

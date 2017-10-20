@@ -19,8 +19,7 @@ function checkOwnership(req, res, next){
     if (err){ return next(err) }
     if (!recipe){ return next(new Error('404')) }
 
-   // if(typeof(req.user)==='undefined')
-    // res.locals.recipeIsCurrentUsers = '';
+
 
    if (recipe.belongsTo(req.user)){
       res.locals.recipeIsCurrentUsers = true;

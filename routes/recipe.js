@@ -5,7 +5,7 @@ const { ensureLoggedIn }                    = require('connect-ensure-login');
 const { authorizeRecipe,checkOwnership }    = require('../middleware/recipe-authorization');
 
 // reden view that display the form that create new recipe
-router.get('/new', (req, res) => {
+router.get('/newRecipe', (req, res) => {
  res.render('recipe/new');
 });
 
@@ -78,21 +78,3 @@ router.post('/:id', ensureLoggedIn('/login'), authorizeRecipe, (req, res, next) 
 
 
 module.exports = router;
-
-
-
-
-
-
-
-
-// router.post('/job/new', ensureLoggedIn(), upload.single('photo'), (req, res) => {
-//     const pic = new Picture ({
-//       name: req.body.name,
-//       pic_path: `/uploads/${req.file.filename}`,
-//       pic_name: req.body.picName
-//     })
-//     pic.save((err) => {
-//         res.redirect('/');
-//     });
-// });

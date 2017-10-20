@@ -27,6 +27,20 @@
                </div>
            </div>
          <%  }) %>
+          </div>
+         <div class="kitchen-row row">
+    <h3 class="text-center">kitchen you belongs to</h3>
+    <% kitchen.forEach((kitchen) => { %>
+      <div class="col-sm-3 home-kitchen-box">
+        <div class="kitchen-info-wrapper">
+          <a class="title" href="/kitchens/<%= kitchen._id %>">
+            <strong><%= kitchen.kitchen %></strong>
+          </a><br>
+          by <span class="light-text"><%= kitchen._chef.username %></span><br>
+        </div>
+      </div>
+    <%  }) %>
+  </div>
    <!-- <%  if ( typeof pictures !== "undefined"){ %>
           <section>
            <% pictures.forEach(function(picture) { %>

@@ -17,8 +17,8 @@
    <div class="col-sm-8">
      <img class="recipe-image" src="<%= recipe.image %>">
    </div>
-   <% if (campaignIsCurrentUsers) { %>
-  <a  href="/campaigns/<%= campaign._id%>/edit">Edit This Project</a>
+   <% if (recipeIsCurrentUsers) { %>
+  <a  href="/recipes/<%= recipe._id%>/edit">Edit This Project</a>
 <% } else { %>
 <% } %>
     <!-- <div class="col-sm-4 recipe-info">

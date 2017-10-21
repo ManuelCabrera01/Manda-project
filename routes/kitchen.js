@@ -1,8 +1,8 @@
 const express                   = require('express');
 const kitchen                   = require('../models/kitchen');
 const router                    = express.Router();
-const { authorizeKitchen,checkOwnership } = require('../middleware/kitchen-authorization');
 const { ensureLoggedIn }        = require('connect-ensure-login');
+const { authorizeKitchen,checkOwnership } = require('../middleware/kitchen-authorization');
 
 router.get('/createKitchen', (req, res) => {
  res.render('kitchen/new');

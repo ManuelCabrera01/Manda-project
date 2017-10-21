@@ -13,4 +13,5 @@ KitchenSchema.methods.belongsTo = function(user){
   return this._chef.equals(user._id);
 }
 
-module.exports = mongoose.model('kitchen', KitchenSchema);
+const Kitchen = mongoose.model('kitchen', KitchenSchema);
+module.exports = Kitchen;

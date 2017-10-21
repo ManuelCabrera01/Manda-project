@@ -1,6 +1,6 @@
 const express            = require('express');
 const path               = require('path');
-// const favicon            = require('serve-favicon');
+const favicon            = require('serve-favicon');
 const logger             = require('morgan');
 const cookieParser       = require('cookie-parser');
 const bodyParser         = require('body-parser');
@@ -13,11 +13,8 @@ const authRoutes         = require('./routes/authentication.js');
 const LocalStrategy      = require('passport-local').Strategy;
 const User               = require('./models/user');
 const bcrypt             = require('bcrypt');
-
-
 const index              = require('./routes/index');
 const recipeRoutes       = require('./routes/recipe.js');
-// const kitchenRoutes      = require('./routes/kitchen.js');
 
 
 mongoose.connect('mongodb://localhost:27017/Manda-development');
@@ -131,8 +128,8 @@ app.use( (req, res, next) => {
 
 app.use('/', index);
 app.use('/', authRoutes);
+app.use('/recipe', recipeRoutes);
 // app.use('/', kitchenRoutes);
-app.use('/', recipeRoutes);
 
 
 // app.use('/users', users);

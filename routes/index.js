@@ -1,7 +1,6 @@
 const express            = require('express');
 const router             = express.Router();
 const Recipe             = require('../models/recipe');
-const Kitchen             = require('../models/kitchen');
 // const Picture            = require('../models/requestJOb');
 // const multer             = require('multer');
 
@@ -18,15 +17,7 @@ router.get('/', (req, res, next) => {
      });;
 });
 
-// router.get('/', (req, res, next) => {
-//   Kitchen
-//      .find({})
-//      .populate('chef')
-//      .exec((err, recipe) => {
-//        res.render('index.ejs', { kitchen });
-//      });;
-// });
-//
+
 
 
 // router.get('/', function(req, res, next) {

@@ -171,7 +171,7 @@ nav.navbar {
 
 /*kitchen */
 
-.kitchen-row {
+/*.kitchen-row {
   margin-top: 3%;
 }
 
@@ -179,7 +179,7 @@ nav.navbar {
   border: 1px solid #d3d3d3;
   height: 300px;
   margin: 30px 4%;
-  padding: 0;
+  padding: 0;*/
 }
 
 /*.home-kitchen-box img {
@@ -187,20 +187,20 @@ nav.navbar {
   height: 45%;
 }*/
 
-.kitchen-info-wrapper {
-  padding: 5px 7px;
+/*.kitchen-info-wrapper {*/
+  /*padding: 5px 7px;
   font-size: 0.9em;
-}
+}*/
 
 /*.campaign-info-wrapper > .description {
   display: block;
   margin-top: 20px;
 }*/
 
-.kitchen-info-wrapper > .kitchen {
+/*.kitchen-info-wrapper > .kitchen {
   color: black;
   font-size: 1.1em;
-}
+}*/
  /*kitchen show*/
 
  /*.campaign-image {
@@ -213,12 +213,12 @@ nav.navbar {
   color: #05AF3C;
 }*/
 
-.light-text {
+/*.light-text {
   color: #626369;
-}
+}*/
 
-.large-strong {
-  font-size: 1.4em;
+/*.large-strong {*/
+  /*font-size: 1.4em;*/
 }
 
 /*progress {
@@ -229,9 +229,9 @@ nav.navbar {
   margin-bottom: 15px;
 }*/
 
-.kitchen-container .row {
+/*.kitchen-container .row {
   padding: 35px 0;
-}
+}*/
 
 /*.backer-btn {
   background-color: #25CB68;
@@ -249,7 +249,7 @@ nav.navbar {
   background-color: #05AF3C;
 }*/
 
-.kitchen-member{
+/*.kitchen-member{
   font-size: 1.4rem;
   border: 1px solid black;
   padding: 10px 0;
@@ -260,4 +260,4 @@ nav.navbar {
 
 .campaign-recipe {
   padding-right: 275px;
-}
+}*/

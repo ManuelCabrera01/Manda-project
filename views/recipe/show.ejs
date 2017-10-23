@@ -16,12 +16,13 @@
     <div class="row">
    <div class="col-sm-8">
      <img class="recipe-image" src="<%= recipe.image %>">
-   </div>
-   <% if (recipeIsCurrentUsers) { %>
-  <a  href="/recipes/<%= recipe._id%>/edit">Edit This Project</a>
-<% } else { %>
-<% } %>
 
+     <% if (recipeIsCurrentUsers) { %>
+       <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This Project</a>
+     <% } else { %>
+       <a class="btn backer-btn" href="#">Back This Project</a>
+     <% } %>
+
+   </div>
     </div>
   </div>
-<!-- </div> -->

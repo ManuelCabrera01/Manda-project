@@ -8,7 +8,7 @@ const RecipeSchema = new Schema({
   instructions  : { type: String, required: true },
   _creator      : { type: Schema.ObjectId, ref: 'User', required: true },
   notes         : { type: String, required: true },
-  imgUrl        : { type: String }
+  imgUrl        : { type: String, default: "https://placeholdit.imgix.net/~text?txtsize=33&txt=500x500&w=500&h=500" }
 
 });
 RecipeSchema.methods.belongsTo = function(user){

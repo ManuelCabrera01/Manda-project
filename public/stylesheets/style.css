@@ -66,7 +66,7 @@ nav.navbar {
 }
 
 .btn-logout {
-  color: black;
+  /*color: black;*/
   padding: 15px;
   border: 0;
 }
@@ -75,17 +75,17 @@ nav.navbar {
  height: 30px
 }
 .col-sm-6 {
-    width: 50%;
+    width: 20%;
     margin-top: 40px;
 }
 
 .recipe-row {
-  margin-top: 3%;
+  margin-top: 50px;
 }
 
 .home-recipe-box {
   border: 1px solid #d3d3d3;
-  height: 300px;
+  height: 150px;
   margin: 30px 4%;
   padding: 0;
 }

@@ -15,10 +15,10 @@ router.post('/login', ensureLoggedOut(), passport.authenticate('local-login', {
 }));
 
 router.get('/signup', ensureLoggedOut(), (req, res) => {
-    res.render('authentication/signup', { types: TYPES });
+    res.render('authentication/signup');
 });
 
-router.post('/signup', ensureLoggedOut(), passport.authenticate('local-signup', {
+router.post('/signup' , ensureLoggedOut(), passport.authenticate('local-signup', {
   successRedirect : '/',
   failureRedirect : '/signup'
 }));

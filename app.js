@@ -9,12 +9,9 @@ const expressLayouts     = require('express-ejs-layouts');
 const passport           = require('passport');
 const session            = require('express-session');
 const MongoStore         = require('connect-mongo')(session);
-const authRoutes         = require('./routes/authentication.js');
 const LocalStrategy      = require('passport-local').Strategy;
 const User               = require('./models/user');
 const bcrypt             = require('bcrypt');
-const index              = require('./routes/index');
-const recipeRoutes       = require('./routes/recipe.js');
 
 
 
@@ -61,6 +58,23 @@ passport.deserializeUser((id, cb) => {
   });
 });
 
+passport.use('local-login', new LocalStrategy((username, password, next) => {
+  User.findOne({ username }, (err, user) => {
+    if (err) {
+      // console.log("theres an error dude...>>>>>>>>>>>>>");
+      return next(err);
+    }
+    if (!user) {
+      return next(null, false, { message: "Incorrect username" });
+    }
+    if (!bcrypt.compareSync(password, user.password)) {
+      return next(null, false, { message: "Incorrect password" });
+    }
+
+    return next(null, user);
+  });
+}));
+
 // Signing Up
 passport.use('local-signup', new LocalStrategy(
   { passReqToCallback: true },
@@ -94,22 +108,6 @@ passport.use('local-signup', new LocalStrategy(
     });
 }));
 
-passport.use('local-login', new LocalStrategy((username, password, next) => {
-  User.findOne({ username }, (err, user) => {
-    if (err) {
-    // console.log("theres an error dude...>>>>>>>>>>>>>");
-      return next(err);
-    }
-    if (!user) {
-      return next(null, false, { message: "Incorrect username" });
-    }
-    if (!bcrypt.compareSync(password, user.password)) {
-      return next(null, false, { message: "Incorrect password" });
-    }
-
-    return next(null, user);
-  });
-}));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -126,13 +124,15 @@ app.use( (req, res, next) => {
 
 // all my routes
 
+const index              = require('./routes/index');
 app.use('/', index);
-app.use('/', authRoutes);
+const recipeRoutes       = require('./routes/recipe.js');
 app.use('/recipe', recipeRoutes);
+const authRoutes         = require('./routes/authentication.js');
+app.use('/', authRoutes);
 // app.use('/', kitchenRoutes);
 
 
-// app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

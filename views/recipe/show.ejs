@@ -1,4 +1,4 @@
-!-- recipe/show.ejs -->
+
 <div class="container recipe-container">
   <div class="row">
     <div class="col-sm-2">
@@ -21,26 +21,7 @@
   <a  href="/recipes/<%= recipe._id%>/edit">Edit This Project</a>
 <% } else { %>
 <% } %>
-    <!-- <div class="col-sm-4 recipe-info">
-      <div class="recipe-progress">
-        <progress value="<%= recipe.totalPledged %>" max="<%= recipe.goal %>"></progress>
-      </div>
-      <div class="recipe-pledged">
-        <span class="recipe-total">$<%= recipe.totalPledged %></span><br>
-        <span class="light-text">
-          pledged of
-          $<%= recipe.goal %></span> goal
-        </span>
-      </div> -->
-      <!-- <div class="recipe-backers"> -->
-        <!-- <strong class="large-strong"><%= recipe.backerCount %></strong><br> -->
-        <!-- <span class="light-text">backers</span> -->
-      <!-- </div> -->
-      <!-- <div class="recipe-time"> -->
-        <!-- <strong class="large-strong"><%= recipe.timeRemaining.days %></strong><br> -->
-        <!-- <span class="light-text"><%= recipe.timeRemaining.unit  %> to go.</span> -->
-      <!-- </div> -->
-      <!-- <a class="btn backer-btn" href="/recipes/<%= recipe._id%>/rewards">Back This Project</a> -->
+
     </div>
   </div>
 <!-- </div> -->

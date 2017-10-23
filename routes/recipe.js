@@ -5,25 +5,24 @@ const { ensureLoggedIn }                    = require('connect-ensure-login');
 const { authorizeRecipe,checkOwnership }    = require('../middleware/recipe-authorization');
 
 // reden view that display the form that create new recipe
-router.get('/newRecipe', (req, res) => {
+router.get('/new', (req, res) => {
  res.render('recipe/new');
 });
 
 //  saving new recipe
-router.post('/recipe', ensureLoggedIn('/login'), (req, res, next) => {
+router.post('/', ensureLoggedIn('/login'), (req, res, next) => {
   const newRecipe = new Recipe({
      recipe       : req.body.recipe,
      ingredients  : req.body.ingredients,
      instructions : req.body.instructions,
-     _creator     : req.user._id,
+    //  _creator     : req.user._id,
      notes        : req.body. notes
-
-     });
+    });
 
      newRecipe.save( (err) => {
        if (err) {
         //  console.log("ERRROR: ", err);
-         res.render('recipe/new', { Recipe: newRecipe});
+         res.render('recipe/new', { recipe: newRecipe});
        } else {
          res.redirect(`/recipe/${newRecipe._id}`);
        }
@@ -36,7 +35,7 @@ router.post('/recipe', ensureLoggedIn('/login'), (req, res, next) => {
 
       recipe.populate('_creator', (err, recipe) => {
         if (err){ return next(err); }
-        return res.render('recipe/show', { recipe });
+        return res.render('recipe/show');
       });
     });
   });

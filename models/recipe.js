@@ -15,5 +15,5 @@ RecipeSchema.methods.belongsTo = function(user){
   return this._creator.equals(user._id);
 }
 
-const Recipe = mongoose.model('recipe', RecipeSchema);
+const Recipe = mongoose.model('Recipe', RecipeSchema);
 module.exports = Recipe;

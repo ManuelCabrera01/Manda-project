@@ -18,6 +18,7 @@ const bcrypt             = require('bcrypt');
 
 
 
+
 mongoose.connect('mongodb://localhost:27017/Manda-development');
 
 const app = express();
@@ -124,6 +125,8 @@ app.use( (req, res, next) => {
 
 // all my routes
 
+const recipeBook        = require ('./routes/recipe-book.js')
+app.use('/', recipeBook);
 const index              = require('./routes/index');
 app.use('/', index);
 const recipeRoutes       = require('./routes/recipe.js');

@@ -4,18 +4,18 @@ const Recipe             = require('../models/recipe');
 // const Picture            = require('../models/requestJOb');
 // const multer             = require('multer');
 
-// router.get('/', (req, res, next) => {
-//   res.render('index');
-// });
-
 router.get('/', (req, res, next) => {
-  Recipe
-     .find({})
-     .populate('_creator')
-     .exec((err, recipe) => {
-       res.render('index', { recipe });
-     });;
+  res.render('index');
 });
+
+// router.get('/', (req, res, next) => {
+//   Recipe
+//      .find({})
+//      .populate('_creator')
+//      .exec((err, recipe) => {
+//        res.render('index', { recipe });
+//      });;
+// });
 
 
 

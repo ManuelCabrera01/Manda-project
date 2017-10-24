@@ -1,7 +1,6 @@
 const express                            = require('express');
 const router                             = express.Router();
 const passport                           = require('passport');
-const TYPES                               = require('../models/profession-types');
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
 
@@ -10,7 +9,7 @@ router.get('/login', ensureLoggedOut(), (req, res) => {
 });
 
 router.post('/login', ensureLoggedOut(), passport.authenticate('local-login', {
-  successRedirect : '/',
+  successRedirect : '/recipeBook',
   failureRedirect : '/login'
 }));
 
@@ -19,7 +18,7 @@ router.get('/signup', ensureLoggedOut(), (req, res) => {
 });
 
 router.post('/signup' , ensureLoggedOut(), passport.authenticate('local-signup', {
-  successRedirect : '/',
+  successRedirect : '/recipeBook',
   failureRedirect : '/signup'
 }));
 

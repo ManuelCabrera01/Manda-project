@@ -8,21 +8,6 @@
 
 
 
-       <div class="recipe-row row">
-           <h3 class="text-center">this is a sample of your recipe...</h3>
-             <div class="col-sm-4 home-recipe-box">
-               <% recipe.forEach((recipe) => { %>
-               <img src="<%= recipe.image %>">
-               <div class="recipe-info-wrapper">
-                 <a class="title" href="/recipe/<%= recipe._id %>">
-                   <strong><%= recipe.recipe %></strong>
-                 </a><br>
-                 by <span class="light-text"><%= recipe._creator.username %></span><br>
-               </div>
-           </div>
-         <%  }) %>
-          </div>
-
   </div>
 
       </div>

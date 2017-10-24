@@ -12,7 +12,12 @@
       <% if (recipeIsCurrentUsers) { %>
 
         <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>
-        <button type="button" name="delete">delete this recipe</button>
+
+
+    <form action="/recipe/<%= recipe._id %>/delete" method="POST">
+      <button type="submit">Delete </button>
+    </form>
+
       <% } else { %>
         <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
       <% } %>

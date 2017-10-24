@@ -72,6 +72,16 @@ router.post('/:id',[ ensureLoggedIn('/login'), authorizeRecipe], (req, res, next
   });
 });
 
+router.post('/:id/delete', (req, res, next) => {
+  const id = req.params.id;
+
+  Recipe.findByIdAndRemove(id, (err, product) => {
+    if (err){ return next(err); }
+    return res.redirect('/recipeBook');
+  });
+
+});
+
 
 
 module.exports = router;

@@ -4,7 +4,7 @@
 
 <div class="recipe-row row">
     <h3 class="text-center">this is a view of all your recipe...</h3>
-      <div class="col-sm-4 home-recipe-box">
+      <div class="col-md-2 home-recipe-box">
         <% recipe.forEach((recipe) => { %>
         <img src="<%= recipe.image %>">
         <div class="recipe-info-wrapper">
@@ -14,6 +14,7 @@
           by <span class="light-text"><%= recipe._creator.username %></span><br>
         </div>
     </div>
-  <%  }) %>
+
    </div>
+     <%  }) %>
 </div>

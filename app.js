@@ -13,13 +13,14 @@ const LocalStrategy      = require('passport-local').Strategy;
 const User               = require('./models/user');
 const bcrypt             = require('bcrypt');
 
+require("dotenv").config()
 
 
 
 
 
 
-mongoose.connect('mongodb://localhost:27017/Manda-development');
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 // view engine setup

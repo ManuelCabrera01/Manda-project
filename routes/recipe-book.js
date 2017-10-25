@@ -8,7 +8,7 @@ router.get('/recipeBook', (req, res, next) => {
      .find({})
      .populate('_creator')
      .exec((err, recipe) => {
-       res.render('recipe-book', { recipe });
+       res.render('recipe-book', { recipe }) ;
      });;
 });
 

@@ -132,6 +132,8 @@ const index              = require('./routes/index');
 app.use('/', index);
 const recipeRoutes       = require('./routes/recipe.js');
 app.use('/recipe', recipeRoutes);
+const reviewRoutes = require('./routes/recipe-reviews');
+app.use('/', reviewRoutes);
 const authRoutes         = require('./routes/authentication.js');
 app.use('/', authRoutes);
 // app.use('/', kitchenRoutes);

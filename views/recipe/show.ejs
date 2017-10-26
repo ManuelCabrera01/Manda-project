@@ -9,6 +9,9 @@
       <h1><%= recipe.recipe %></h1>
       <p class="recipe-ingredients"><%= recipe.ingredients %></p>
       <p class="recipe-instructions"><%= recipe.instructions %></p>
+
+
+
       <% if (recipeIsCurrentUsers) { %>
 
         <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>

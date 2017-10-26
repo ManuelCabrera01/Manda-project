@@ -1,0 +1,11 @@
+<form action="/recipes/<%= recipe._id %>/reviews" method="POST">
+
+  <label for="coment">Coment</label>
+  <textarea name="coment" rows="3" cols="80"></textarea>
+
+  <label for="author">Stars</label>
+  <input type="number" name="stars" id="stars">
+
+
+  <button type="submit">Submit Review</button>
+</form>

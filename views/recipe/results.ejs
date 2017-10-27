@@ -1,0 +1,3 @@
+<% recipe.forEach((recipe) => { %>
+  <a href="/recipe/<%= recipe.id %>"><%= recipe.recipe %></a><%= recipe._creator.username %>
+<%  }); %>

@@ -30,6 +30,18 @@ console.log("new recipe")
      });
   });
 
+  router.get('/search', (req, res, next) => {
+    let query = req.query.searchTerm;
+
+    let queryRegex = new RegExp(query);
+    // We use a Regex here to find items that are similar to the search
+    // For instance if I searched "Yoga", I would then find the Yoga Mat
+    Recipe.find({ recipe: queryRegex }, (err, recipe) => {
+      if (err) { next(err) }
+      res.render('recipe/recipe-results', {recipe});
+    });
+  })
+
   router.get('/:id', checkOwnership, (req, res, next) => {
     Recipe.findById(req.params.id, (err, recipe) => {
       if (err){ return next(err); }
@@ -75,7 +87,7 @@ router.post('/:id',[ ensureLoggedIn('/login'), authorizeRecipe], (req, res, next
 router.post('/:id/delete', (req, res, next) => {
   const id = req.params.id;
 
-  Recipe.findByIdAndRemove(id, (err, product) => {
+  Recipe.findByIdAndRemove(id, (err, recipe) => {
     if (err){ return next(err); }
     return res.redirect('/recipeBook');
   });

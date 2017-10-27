@@ -154,18 +154,18 @@ nav.navbar {
 
 
 
-.recipe-engredients {
+/*.recipe-engredients {
   font-size: 1.4rem;
   border: 1px solid black;
   padding: 10px 0;
   text-align: center;
   float: right;
   width: 70px;
-}
+}*/
 
-.recipe-instructions {
+/*.recipe-instructions {
   padding-right: 275px;
-}
+}*/
 /* recipe style ends*/
 
 form { margin: 0px 10px; }
@@ -193,15 +193,30 @@ h2 {
 .right { float: right; }
 
 /* creatingn and editing recipe style*/
-.text-area-t{
+.centerTittle{
+  display: block;
+  margin-left: auto;
+   margin-right: auto;
   position: relative;
-  
-  width: 130%;
+  width: 30%;
+ height: 30px
+}
+.typingArea{
+    margin-top: 30px;
+}
+
+.text-area-t{
+  width: 85%;
  height: 30px
 
 }
 .text-area-S{
-  width: 80%;
-  height: 30px
+  margin:5%;
+  width:580px;
+  height: 200px;
+}
+.typing{
+  font-size: 25px;
+  font-family:Goudy Old Style;
 }
 /* creatingn and editing recipe style*/

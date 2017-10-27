@@ -2,7 +2,7 @@
 <div class="main-container">
   <div class="row">
     <div class="col-sm-2">
-<img src="https://ksr-ugc.imgix.net/assets/007/188/910/68df9ec3603e3f3138bed402dea3cab2_original.jpg?w=80&h=80&fit=crop&v=1466566705&auto=format&q=92&s=eff05acf65569368cc99f6363722fe60"><br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkq8TQw_GdqB6wQciWU7niYJtGxtjtwbJBcHyWIUTBriDBzsK7"><br>
     By: <strong><%= recipe._creator.username %></strong>
     </div>
     <div class="col-sm-10">
@@ -10,7 +10,9 @@
       <p class="recipe-ingredients"><%= recipe.ingredients %></p>
       <p class="recipe-instructions"><%= recipe.instructions %></p>
       <% if (recipeIsCurrentUsers) { %>
-        <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>
+
+       <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>
+
     <form action="/recipe/<%= recipe._id %>/delete" method="POST">
       <button type="submit">Delete </button>
     </form>
@@ -20,11 +22,3 @@
     </div>
   </div>
   </div>
-  <div class="row">
-    <div class="row">
-   <div class="col-sm-8">
-
-   </div>
-    </div>
-  </div>
-<!-- </div> -->

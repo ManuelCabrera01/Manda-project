@@ -84,7 +84,11 @@ nav.navbar {
 }
 /* general style for main layoud and index end*/
 
-.new-recipe{
+.new-recipe {
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/02/Old-Lined-Paper-Background-For-Free.jpg);
+  background-size: 100%;
+}
+.edit-recipe{
   background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/02/Old-Lined-Paper-Background-For-Free.jpg);
   background-size: 100%;
 }
@@ -152,18 +156,16 @@ nav.navbar {
   padding: 35px 0;
 }
 
-
-
-/*.recipe-engredients {
+/*.recipe-ingredients{
   font-size: 1.4rem;
-  border: 1px solid black;
   padding: 10px 0;
   text-align: center;
   float: right;
   width: 70px;
-}*/
+}
 
-/*.recipe-instructions {
+
+.recipe-instructions {
   padding-right: 275px;
 }*/
 /* recipe style ends*/
@@ -218,5 +220,12 @@ h2 {
 .typing{
   font-size: 25px;
   font-family:Goudy Old Style;
+}
+
+.col-sm-10{
+  margin-left: 30px
+}
+.col-sm-2{
+  margin-left: 30px
 }
 /* creatingn and editing recipe style*/

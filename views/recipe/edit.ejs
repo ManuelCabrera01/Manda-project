@@ -1,30 +1,42 @@
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 centered-form">
+<div class="container-fluid edit-recipe">
 
       <form action="/recipe/<%= recipe._id %>" method="post">
-        <div class="form-group">
-          <label for="recipe">recipe</label>
-          <input type="text" name="recipe" class="form-control" value="<%= recipe.recipe %>">
+        <div class="row">
+          <div class="col-sm-12 centered-form">
+        <div  class=" centerTittle">
+          <label class="typing" for="recipe">Recipe</label>
+          <input type="text" name="recipe" class="text-area-t ">
         </div>
-        <div class="form-group">
-          <label for="ingredients">Ingredients</label>
-          <input type="text" name="ingredients" class="form-control" value="<%= recipe.ingredients %>">
+          </div>
         </div>
+
+
+        <div class="row">
+          <div class="col-sm-6 centered-form">
+            <div class="typingArea">
+              <div class="form-group">
+        <label class="typing"for="ingredients" >Ingredients</label>
+        <textarea id="ingredients" name="ingredients" class="text-area-S">-
+        </textarea>
+             </div>
         <div class="form-group">
-          <label for="instructions">Instructions</label>
-          <textarea
-            id="instructions"
-            name="instructions"
-            class="form-control">
-            <%= recipe.instructions %>
-          </textarea>
-        </div>
+        <label class="typing" for="instructions">Instruction</label>
+        <textarea id="instructions" name="instructions" class="text-area-S"> </textarea>
+          </div>
+            </div>
+             </div>
+            </div>
+
+        <div class="row">
+          <div class="col-sm-6 centered-form">
         <div class="form-group">
-          <button type="submit">Update recipe</button>
+            <!-- <input type="file" name="photo" value=""> -->
+          <button  type="submit">Update  creation</button>
+          </div>
         </div>
-      </form>
+        </div>
+  </form>
       <% if (typeof(errors) !== 'undefined'){ %>
   <div class="alert alert-danger">
   <ul>
@@ -36,4 +48,11 @@
 <% } %>
     </div>
   </div>
-</div>
+
+
+
+
+
+
+
+c

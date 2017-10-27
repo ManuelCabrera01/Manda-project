@@ -1,8 +1,4 @@
-/*body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}*/
-
+/* general style for main layoud and index*/
 a {
   font-family: Goudy Old Style;
   color: #00B7FF;
@@ -86,11 +82,18 @@ nav.navbar {
   width: 80%;
  height: 30px
 }
+/* general style for main layoud and index end*/
 
+.new-recipe{
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/02/Old-Lined-Paper-Background-For-Free.jpg);
+  background-size: 100%;
+}
 .col-sm-6 {
     width: 20%;
     margin-top: 40px;
 }
+/* recipe style*/
+
 
 .recipe-row {
   padding: 10px;
@@ -129,10 +132,7 @@ nav.navbar {
   height: 500px;
 }
 
-/*.recipe-total {
-  font-size: 1.9em;
-  color: #05AF3C;
-}*/
+
 
 .light-text {
   color: #626369;
@@ -142,9 +142,7 @@ nav.navbar {
   font-size: 1.4em;
 }
 
-/*progress {
-  width: 100%;
-}*/
+
 
 .recipe-info div {
   margin-bottom: 15px;
@@ -154,21 +152,7 @@ nav.navbar {
   padding: 35px 0;
 }
 
-/*.backer-btn {
-  background-color: #25CB68;
-  border-radius: 3px;
-  border: 1px solid black;
-  color: white;
-  width: 300px;
-  height: 75px;
-  padding: 2.4rem 4.8rem;
-  font-size: 1.8rem;
-}*/
 
-/*.backer-btn:hover {
-  color: white;
-  background-color: #05AF3C;
-}*/
 
 .recipe-engredients {
   font-size: 1.4rem;
@@ -182,99 +166,8 @@ nav.navbar {
 .recipe-instructions {
   padding-right: 275px;
 }
+/* recipe style ends*/
 
-/*kitchen */
-
-/*.kitchen-row {
-  margin-top: 3%;
-}
-
-.home-kitchen-box {
-  border: 1px solid #d3d3d3;
-  height: 300px;
-  margin: 30px 4%;
-  padding: 0;*/
-}
-
-/*.home-kitchen-box img {
-  width: 100%;
-  height: 45%;
-}*/
-
-/*.kitchen-info-wrapper {*/
-  /*padding: 5px 7px;
-  font-size: 0.9em;
-}*/
-
-/*.campaign-info-wrapper > .description {
-  display: block;
-  margin-top: 20px;
-}*/
-
-/*.kitchen-info-wrapper > .kitchen {
-  color: black;
-  font-size: 1.1em;
-}*/
- /*kitchen show*/
-
- /*.campaign-image {
-  width: 100%;
-  height: 500px;
-}*/
-
-/*.campaign-total {
-  font-size: 1.9em;
-  color: #05AF3C;
-}*/
-
-/*.light-text {
-  color: #626369;
-}*/
-
-/*.large-strong {*/
-  /*font-size: 1.4em;*/
-}
-
-/*progress {
-  width: 100%;
-}*/
-
-/*.kitchen-info div {
-  margin-bottom: 15px;
-}*/
-
-/*.kitchen-container .row {
-  padding: 35px 0;
-}*/
-
-/*.backer-btn {
-  background-color: #25CB68;
-  border-radius: 3px;
-  border: 1px solid black;
-  color: white;
-  width: 300px;
-  height: 75px;
-  padding: 2.4rem 4.8rem;
-  font-size: 1.8rem;
-}*/
-
-/*.backer-btn:hover {
-  color: white;
-  background-color: #05AF3C;
-}*/
-
-/*.kitchen-member{
-  font-size: 1.4rem;
-  border: 1px solid black;
-  padding: 10px 0;
-  text-align: center;
-  float: right;
-  width: 70px;
-}
-
-.campaign-recipe {
-  padding-right: 275px;
-}*/
 form { margin: 0px 10px; }
 
 h2 {
@@ -298,3 +191,17 @@ h2 {
 .left { float: left; }
 
 .right { float: right; }
+
+/* creatingn and editing recipe style*/
+.text-area-t{
+  position: relative;
+  
+  width: 130%;
+ height: 30px
+
+}
+.text-area-S{
+  width: 80%;
+  height: 30px
+}
+/* creatingn and editing recipe style*/

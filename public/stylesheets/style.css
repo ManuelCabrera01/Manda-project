@@ -9,16 +9,21 @@ a {
 }
 
 .main-container {
+
   padding-top: 25px;
 }
-.page-name{
-  font-family: "Goudy Old Style";
-}
+
+
 
 nav.navbar {
   background-color :rgb(108, 86, 44);
   box-shadow: 0px 4px 10px 0 rgba(22,22,22,0.08);
   margin-bottom: 0;
+}
+
+.recipe-link{
+  font-size: 20px;
+    color: black;
 }
 
 .nav > li > a {
@@ -33,10 +38,6 @@ nav.navbar {
   margin-left: -87px;
 }
 
-/*.nav-logo-image {
-  height: 17px;
-  width: 100%;
-}*/
 
 .nav > .li-logout {
   padding: 7px;
@@ -52,7 +53,7 @@ nav.navbar {
   background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-  height: 75vh;
+  height: 117vh;
   padding: 0 30%;
   position: relative;
 }
@@ -65,15 +66,19 @@ nav.navbar {
   transform: translate(-50%, -50%);
 }
 .home-heading-wrapper > h1 {
+  font-style: italic;
+  font-family: "Goudy Old Style";
+   color: rgb(146, 112, 17);
   font-size: 9rem;
 }
 
 .home-heading-wrapper > p {
-  font-size: 2rem;
+  font-size: 4rem;
+  font-family: "Goudy Old Style";
 }
 
 .btn-logout {
-  /*color: black;*/
+  color: black;
   padding: 15px;
   border: 0;
 }
@@ -81,12 +86,14 @@ nav.navbar {
   width: 80%;
  height: 30px
 }
+
 .col-sm-6 {
     width: 20%;
     margin-top: 40px;
 }
 
 .recipe-row {
+  padding: 10px;
   margin-top: 50px;
 }
 
@@ -268,3 +275,26 @@ nav.navbar {
 .campaign-recipe {
   padding-right: 275px;
 }*/
+form { margin: 0px 10px; }
+
+h2 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.container { max-width: 360px; }
+
+.divider {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.divider hr {
+  margin: 7px 0px;
+  width: 35%;
+}
+
+.left { float: left; }
+
+.right { float: right; }

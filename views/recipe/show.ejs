@@ -1,5 +1,5 @@
 
-<div class="container recipe-container">
+<div class="main-container">
   <div class="row">
     <div class="col-sm-2">
 <img src="https://ksr-ugc.imgix.net/assets/007/188/910/68df9ec3603e3f3138bed402dea3cab2_original.jpg?w=80&h=80&fit=crop&v=1466566705&auto=format&q=92&s=eff05acf65569368cc99f6363722fe60"><br>
@@ -9,22 +9,16 @@
       <h1><%= recipe.recipe %></h1>
       <p class="recipe-ingredients"><%= recipe.ingredients %></p>
       <p class="recipe-instructions"><%= recipe.instructions %></p>
-
-
-
       <% if (recipeIsCurrentUsers) { %>
-
         <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>
-
-
     <form action="/recipe/<%= recipe._id %>/delete" method="POST">
       <button type="submit">Delete </button>
     </form>
-
       <% } else { %>
         <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
       <% } %>
     </div>
+  </div>
   </div>
   <div class="row">
     <div class="row">

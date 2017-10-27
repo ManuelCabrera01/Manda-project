@@ -1,11 +1,11 @@
 
-<div class="container">
-
-
-<div class="recipe-row row">
+<div class="container-fluid">
+  <div class="home-heading text-center row">
+    <div class="home-heading-wrapper">
+<div class="recipe-row row3">
     <h3 class="text-center">this is a view of all recipe...</h3>
-      <div class="col-md-2 home-recipe-box">
-        <% recipe.forEach((recipe) => { %>
+    <% recipe.forEach((recipe) => { %>
+      <div class="col-sm-6 home-recipe-box">
         <img src="<%= recipe.image %>">
         <div class="recipe-info-wrapper">
           <a class="title" href="/recipe/<%= recipe._id %>">
@@ -14,7 +14,9 @@
           by <span class="light-text"><%= recipe._creator.username %></span><br>
         </div>
     </div>
-
-   </div>
      <%  }) %>
+   </div>
+     </div>
+   </div>
 </div>
+<

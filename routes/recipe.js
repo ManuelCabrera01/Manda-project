@@ -38,7 +38,7 @@ console.log("new recipe")
     // For instance if I searched "Yoga", I would then find the Yoga Mat
     Recipe.find({ recipe: queryRegex }, (err, recipe) => {
       if (err) { next(err) }
-      res.render('recipe/recipe-results', {recipe});
+      res.render('recipe/results', {recipe});
     });
   })
 

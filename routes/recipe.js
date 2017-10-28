@@ -3,6 +3,8 @@ const Recipe                                = require('../models/recipe');
 const { ensureLoggedIn }                    = require('connect-ensure-login');
 const { authorizeRecipe,checkOwnership }    = require('../middleware/recipe-authorization');
 const router                                = express.Router();
+const User                                  = require('../models/user');
+
 
 // reden view that display the form that create new recipe
 router.get('/new', ensureLoggedIn ('/login'), (req, res, next) => {
@@ -42,7 +44,7 @@ console.log("new recipe")
     });
   })
 
-  router.get('/:id', checkOwnership, (req, res, next) => {
+  router.get('/:id', (req, res, next) => {
     Recipe.findById(req.params.id, (err, recipe) => {
       if (err){ return next(err); }
 

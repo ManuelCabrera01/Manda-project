@@ -55,11 +55,11 @@ nav.navbar {
 }
 
 .home-heading-wrapper {
-  padding: 0 5%;
+  padding: 0 -3%;
   position: absolute;
-  top: 50%;
+  top: 41%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-51%, -50%);
 }
 .home-heading-wrapper > h1 {
   font-style: italic;

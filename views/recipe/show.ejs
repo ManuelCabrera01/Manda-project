@@ -9,16 +9,14 @@
       <h1><%= recipe.recipe %></h1>
       <p class="recipe-ingredients"><%= recipe.ingredients %></p>
       <p class="recipe-instructions"><%= recipe.instructions %></p>
-      <% if (recipeIsCurrentUsers) { %>
-
+      <% if (String(foundUser) === String(recipe._creator)) { %>
        <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>
 
     <form action="/recipe/<%= recipe._id %>/delete" method="POST">
       <button type="submit">Delete </button>
     </form>
-      <% } else { %>
-        <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
       <% } %>
+        <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
     </div>
   </div>
   </div>

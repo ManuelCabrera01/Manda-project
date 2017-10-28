@@ -46,12 +46,16 @@ console.log("new recipe")
 
   router.get('/:id', (req, res, next) => {
     Recipe.findById(req.params.id, (err, recipe) => {
-      if (err){ return next(err); }
+      User.findById(req.user, (err, foundUser)=>{
 
-      recipe.populate('_creator', (err, recipe) => {
-        if (err){ return next(err); }
-        return res.render('recipe/show', {recipe});
+        recipe.populate('_creator', (err, recipe) => {
+          if (err){ return next(err); }
+          return res.render('recipe/show', {recipe, foundUser});
+        });
       });
+      // if (err){ return next(err); }
+
+
     });
   });
 

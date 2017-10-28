@@ -55,13 +55,19 @@ nav.navbar {
 }
 
 .home-heading-wrapper {
-  width:
-  padding: 0 -3%;
   position: absolute;
-  top: 100%;
+  top: 30%;
   left: 50%;
   transform: translate(-51%, -50%);
 }
+
+.ecipeBook-heading-wrapper{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-51%, -50%);
+}
+
 .home-heading-wrapper > h1 {
   font-style: italic;
   font-family: "Goudy Old Style";

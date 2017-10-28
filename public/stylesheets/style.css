@@ -50,7 +50,7 @@ nav.navbar {
     background-attachment: fixed;
     background-position: center;
   height: 117vh;
-  padding: 0 30%;
+  padding: 0 6%;
   position: relative;
 }
 
@@ -105,9 +105,10 @@ nav.navbar {
 }
 
 .home-recipe-box {
+      background-color: white;
   border: 1px solid #d3d3d3;
-  height: 150px;
-  margin: 30px 4%;
+  height: 155px;
+  margin: 18px 4%;
   padding: 0;
 }
 

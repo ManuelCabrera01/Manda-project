@@ -1,13 +1,18 @@
 /* general style for main layoud and index*/
+html {
+  background: url() no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 a {
   font-family: Goudy Old Style;
   color: #00B7FF;
 }
 
-.main-container {
 
-  padding-top: 25px;
-}
 
 
 
@@ -44,25 +49,17 @@ nav.navbar {
   color: black;
 }
 
-.home-heading {
-  background-image: url("https://assets.epicurious.com/photos/54b2e33c11c5d6af478b3701/master/pass/365290_reina-pepiada-arepas_1x1.jpg") ;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  height: 117vh;
-  padding: 0 6%;
-  position: relative;
-}
 
-.home-heading-wrapper {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-51%, -50%);
-}
 
-.ecipeBook-heading-wrapper{
+/*.home-heading-wrapper {
   position: absolute;
+  /*top: 30%;*/
+  /*left: 50%;*/
+  /*transform: translate(-51%, -50%);*/
+}*/
+
+.recipeBook-heading-wrapper{
+  /*position: absolute;*/
   top: 30%;
   left: 50%;
   transform: translate(-51%, -50%);
@@ -100,9 +97,13 @@ nav.navbar {
   background-size: 100%;
 }
 
-.body{
-  background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/02/Old-Lined-Paper-Background-For-Free.jpg);
-  background-size: 100%;
+body{
+  background: url('https://assets.epicurious.com/photos/54b2e33c11c5d6af478b3701/master/pass/365290_reina-pepiada-arepas_1x1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
 /*.col-sm-6 {
     width: 20%;
@@ -190,7 +191,7 @@ h2 {
   margin-bottom: 2px;
 }
 
-/*.container { max-width: 360px; }*/
+/*container { max-width: 360px; }*/*/
 
 .divider {
   text-align: center;

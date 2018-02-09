@@ -15,12 +15,14 @@ router.get('/new', ensureLoggedIn ('/login'), (req, res, next) => {
 router.post('/', ensureLoggedIn('/login'), (req, res, next) => {
   const newRecipe = new Recipe({
      recipe       : req.body.recipe,
+      cookTime:  req.body.cookTime,
+      prepTime:  req.body.prepTime,
      ingredients  : req.body.ingredients,
      instructions : req.body.instructions,
      _creator     : req.user._id,
      notes        : req.body. notes
     });
-console.log("new recipe")
+console.log("new recipe");
 
      newRecipe.save( (err) => {
        if (err) {
@@ -76,6 +78,8 @@ router.post('/:id',[ ensureLoggedIn('/login'), authorizeRecipe], (req, res, next
     recipe       : req.body.recipe,
     ingredients  : req.body.ingredients,
     instructions : req.body.instructions,
+    cookTime: req.body.cookTime,
+    prepTime: req.body.prepTime,
     // _creator     : req.user._id,
     notes        : req.body. notes
 

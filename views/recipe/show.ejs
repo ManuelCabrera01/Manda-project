@@ -2,6 +2,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
+      <!-- arepa picture -->
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkq8TQw_GdqB6wQciWU7niYJtGxtjtwbJBcHyWIUTBriDBzsK7"><br>
     By: <strong><%= recipe._creator.username %></strong>
     <!--  need to modifed this page using bootstrap by centerin all the information in a big square  t\
@@ -11,6 +12,8 @@ the background must change also by  neutral color-->
       <h1><%= recipe.recipe %></h1>
       <p class="recipe-ingredients"><%= recipe.ingredients %></p>
       <p class="recipe-instructions"><%= recipe.instructions %></p>
+        <p  class="recipe-instructions">l<%= recipe.cookTime %></p>
+          <p class="recipe-instructions" ><%= recipe.prepTime %></p>
       <% if (String(foundUser) === String(recipe._creator)) { %>
        <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>
 

@@ -421,3 +421,16 @@ a {
 a.btn_orange, .btn_orange {
     background: #f7941d;
 }
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;\
+  margin-bottom: 0px ;
+  background-color: #f7941d7a;
+}
+.page-header{
+  margin-top: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /*margin-bottom:30px ;*/
+  background-color: #f7941d7a;
+}

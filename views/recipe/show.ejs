@@ -1,14 +1,14 @@
 
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-4">
+      <div class="recipeShow">
+
+
       <!-- arepa picture -->
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkq8TQw_GdqB6wQciWU7niYJtGxtjtwbJBcHyWIUTBriDBzsK7"><br>
-    By: <strong><%= recipe._creator.username %></strong>
-    <!--  need to modifed this page using bootstrap by centerin all the information in a big square  t\
-  the picture tu the left  and to the rigth the redipe name along with the instruction at the bottom \
-the background must change also by  neutral color-->
-<h3>this is show.ejs</h3>
+      By: <strong><%= recipe._creator.username %></strong>
+          <h3>this is show.ejs</h3>
       <h1><%= recipe.recipe %></h1>
       <p class="recipe-ingredients"><%= recipe.ingredients %></p>
       <p class="recipe-instructions"><%= recipe.instructions %></p>
@@ -22,6 +22,7 @@ the background must change also by  neutral color-->
     </form>
       <% } %>
         <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
+            </div>
     </div>
   </div>
   </div>

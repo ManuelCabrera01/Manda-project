@@ -1,11 +1,11 @@
 /* general style for main layoud and index*/
-html {
+/*html {
   background: url() no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+}*/
 
 a {
   font-family: Goudy Old Style;
@@ -134,6 +134,9 @@ body{
   padding: 5px 7px;
   font-size: 0.9em;
 }*/
+.panel{
+      margin: 20px;
+}
 
 .recipe-info-wrapper > .instructions {
   display: block;

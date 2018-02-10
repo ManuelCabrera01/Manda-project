@@ -244,14 +244,79 @@ align-self: center;
 }
 
 
-
+/*ach recipe in the cookbook page*/
+/*------------------*/
+/*------------*/
+/*------*/
 .crane_container {
-    background-color: #fff;
+
+    background-color:#c6d296;
+    border: 3px;
+      border-radius: 5px;
     -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
     -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
     box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
     margin: 0 0 30px;
 }
+
+
+.carbox {
+  border-style: solid;
+  border-color: black;
+  display: block;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #c6d296;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: box-shadow .25s;
+}
+.carbox:hover {
+  box-shadow: 0 9px 19px 0 rgba(0,0,0,0.4),0 7px 21px 0 rgba(0,0,0,0.21);
+}
+.img-carbox {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-carbox img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover;
+  transition: all .25s ease;
+}
+.carbox-content {
+
+  padding:15px;
+  text-align:left;
+}
+.carbox-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.carbox-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.carbox-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.carbox-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+
+/*------*/
+/*------------*/
+/*------------------*/
+/* end of  each recipe in the cookbook page*/
+
 .ribbon_3 {
     position: absolute;
     left: 10px;
@@ -299,54 +364,6 @@ a {
     color: #f7941d;
 }
 
-.carbox {
-  display: block;
-    margin-bottom: 20px;
-    line-height: 1.42857143;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    transition: box-shadow .25s;
-}
-.carbox:hover {
-  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
-.img-carbox {
-  width: 100%;
-  height:200px;
-  border-top-left-radius:2px;
-  border-top-right-radius:2px;
-  display:block;
-    overflow: hidden;
-}
-.img-carbox img{
-  width: 100%;
-  height: 200px;
-  object-fit:cover;
-  transition: all .25s ease;
-}
-.carbox-content {
-  padding:15px;
-  text-align:left;
-}
-.carbox-title {
-  margin-top:0px;
-  font-weight: 700;
-  font-size: 1.65em;
-}
-.carbox-title a {
-  color: #000;
-  text-decoration: none !important;
-}
-.carbox-read-more {
-  border-top: 1px solid #D4D4D4;
-}
-.carbox-read-more a {
-  text-decoration: none !important;
-  padding:10px;
-  font-weight:600;
-  text-transform: uppercase
-}
 /* Button Orange Css */
 .margin-b-30 {
     margin-bottom: 30px;
@@ -377,4 +394,118 @@ a {
 }
 a.btn_orange, .btn_orange {
     background: #f7941d;
+
+
+
+
+
+
+
+
+    /*------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+    /*****************globals*************/
+
+
+
+
+
+    .tab-content {
+      overflow: hidden; }
+      .tab-content img {
+        width: 100%;
+        -webkit-animation-name: opacity;
+                animation-name: opacity;
+        -webkit-animation-duration: .3s;
+                animation-duration: .3s; }
+
+    .card {
+      margin-top: 50px;
+      background: #eee;
+      padding: 3em;
+      line-height: 1.5em; }
+
+
+      .wrapper {
+        background: white;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
+
+    .details {
+      display: flex;
+      flex-direction: column; }
+
+    .colors {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+
+    .product-title, .price, .sizes, .colors {
+      text-transform: UPPERCASE;
+      font-weight: bold; }
+
+    /*.checked, .price span {
+      color: #ff9f1a; }*/
+
+    .product-title, .rating, .product-description, .price, .vote, .sizes {
+      margin-bottom: 15px; }
+
+    .product-title {
+      margin-top: 0; }
+
+    .size {
+      margin-right: 10px; }
+      .size:first-of-type {
+        margin-left: 40px; }
+
+    .color {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      height: 2em;
+      width: 2em;
+      border-radius: 2px; }
+      .color:first-of-type {
+        margin-left: 20px; }
+
+
+
+
+
+    .orange {
+      background: #ff9f1a; }
+
+    .green {
+      background: #85ad00; }
+
+    .blue {
+      background: #0076ad; }
+
+    .tooltip-inner {
+      padding: 1.3em; }
+
+    @-webkit-keyframes opacity {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+                transform: scale(3); }
+      100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1); } }
+
+    @keyframes opacity {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+                transform: scale(3); }
+      100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1); } }
+
+    /*# sourceMappingURL=style.css.map */
+    /*------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 }

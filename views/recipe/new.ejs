@@ -1,6 +1,6 @@
 
 <div class="container-fluid new-recipe">
-      <form action="/recipe" method="post">
+      <form action="/recipe" method="post" enctype="multipart/form-data">
         <!--  need to modifed this page using bootstrap and adding upload picture funtionalyiti by anclusuring everything in a nice square \
         and changing the back ground justlike the edit option-->
 
@@ -45,20 +45,19 @@
         <div class="form-group">
           <label class="typing" for="notes">Notes</label>
           <textarea id="notes" name="notes" class="text-area-S"></textarea>
+          <input type="text" name="name"> <input type="file" name="photo">
+
+
+          <div class="form-group">
+              <!-- <input type="file" name="photo" value=""> -->
+              <button type="submit" class="btn btn-success" value="Save"></button>
+
+            </div>
         </div>
         </div>
 
           </div>
 
-        <div class="row"
-          <div class="col-sm-6 centered-form">
-        <div class="form-group">
-            <!-- <input type="file" name="photo" value=""> -->
-            <button type="submit" class="btn btn-success">summit </button>
-    
-          </div>
-        </div>
-        </div>
 
   </form>
 </div>

@@ -12,6 +12,8 @@ const MongoStore         = require('connect-mongo')(session);
 const LocalStrategy      = require('passport-local').Strategy;
 const User               = require('./models/user');
 const bcrypt             = require('bcrypt');
+const multer            =require ("multer");
+
 
 require("dotenv").config()
 

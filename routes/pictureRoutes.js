@@ -6,11 +6,11 @@ const express                   = require('express');
 const router                    = express.Router();
 const passport                  = require("passport");
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
-const ProfilePicture              = require('../models/pictures')
+const Picture                    = require ("../models/picturea")
 
 
 router.get('/authentication/singup', ensureLoggedIn(), (req, res) => {
-    res.render('profile/pifile-page');
+    res.render('');
 });
 
 

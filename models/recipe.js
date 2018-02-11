@@ -12,7 +12,9 @@ const RecipeSchema = new Schema({
   _creator      : { type: Schema.ObjectId, ref: 'User', required: true },
   notes         : { type: String, required: true },
   imgUrl        : { type: String },
- reviews        : [Review.schema]
+ reviews        : [Review.schema],
+ pic_path:       { type :String, require : true},
+pic_name     :{ type :String, require : true},
 });
 
 RecipeSchema.methods.belongsTo = function(user){

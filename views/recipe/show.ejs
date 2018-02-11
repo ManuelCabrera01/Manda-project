@@ -6,8 +6,8 @@
 				<div class="wrapper row">
 					<div class="preview col-md-6">
             <div class="leftContent">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkq8TQw_GdqB6wQciWU7niYJtGxtjtwbJBcHyWIUTBriDBzsK7"><br>
-      <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
+ <img src="<%= recipe.pic_path %>" alt="<%= recipe.pic_name %>" />
+       <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
             <div class="action">
               <% if (String(foundUser) === String(recipe._creator)) { %>
                <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>

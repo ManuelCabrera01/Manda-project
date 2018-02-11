@@ -4,6 +4,9 @@ const { ensureLoggedIn }                    = require('connect-ensure-login');
 const { authorizeRecipe,checkOwnership }    = require('../middleware/recipe-authorization');
 const router                                = express.Router();
 const User                                  = require('../models/user');
+const multer                        = require ('multer');
+const upload = multer({ dest: 'public/uploads/' });
+
 
 
 // reden view that display the form that create new recipe
@@ -12,13 +15,15 @@ router.get('/new', ensureLoggedIn ('/login'), (req, res, next) => {
 });
 
 //  saving new recipe
-router.post('/', ensureLoggedIn('/login'), (req, res, next) => {
+router.post('/', ensureLoggedIn('/login'),  upload.single('photo'),  (req, res, next) => {
   const newRecipe = new Recipe({
      recipe       : req.body.recipe,
       cookTime:  req.body.cookTime,
       prepTime:  req.body.prepTime,
      ingredients  : req.body.ingredients,
      instructions : req.body.instructions,
+     pic_path: `/uploads/${req.file.filename}`,
+     pic_name: req.file.originalname,
      _creator     : req.user._id,
      notes        : req.body. notes
     });

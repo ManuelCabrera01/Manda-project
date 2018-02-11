@@ -432,12 +432,19 @@ a.btn_orange, .btn_orange {
       display: flex;
       flex-direction: column; }
 
+.details {
+background-color: white;
+border-radius: 5px;
 
+  }
 
-    .product-title, .price, .sizes, .colors {
+     .price, .sizes, .colors {
       text-transform: UPPERCASE;
       font-weight: bold; }
+.product-title{
 
+  text-align: center;
+}
 
 
     .product-title, .rating, .product-description, .price, .vote, .sizes {

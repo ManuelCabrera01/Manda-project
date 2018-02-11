@@ -5,32 +5,35 @@
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkq8TQw_GdqB6wQciWU7niYJtGxtjtwbJBcHyWIUTBriDBzsK7"><br>
-					</div>
-					<div class="details col-md-6">
-						<h1 class="product-title"> By: <strong><%= recipe._creator.username %></strong> <br>
-               <%= recipe.recipe %>  </h1>
-						<div class="rating">
-
-							<span class="review-no"> <%= recipe.cookTime %> </span>
-						</div>
-						<p class="product-description"> <%= recipe.ingredients %> </p>
-            <br>
-            <p><%= recipe.instructions %></p>
-						<h4 class="price">preparation time <span><%= recipe.prepTime %></span></h4>
-						<p class="vote">cooking time <strong><%= recipe.cookTime %></strong></p>
-
-						<div class="action">
+            <div class="leftContent">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkq8TQw_GdqB6wQciWU7niYJtGxtjtwbJBcHyWIUTBriDBzsK7"><br>
+      <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
+            <div class="action">
               <% if (String(foundUser) === String(recipe._creator)) { %>
                <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>
-
             <form action="/recipe/<%= recipe._id %>/delete" method="POST">
-              <button type="submit">Delete </button>
+              <button type="submit"class="btn btn-warning"><span class="glyphicon glyphicon-trash" > Delete</span></button>
             </form>
               <% } %>
-                <a class="btn backer-btn" href="/recipeBook">back to the recipe book</button>
+          </div>
+          </div>
+          </div>
+					<div class="details col-md-6">
+          <div class="rigthContent">
+						<h1 class="product-title">  <strong><%= recipe.recipe %> </strong> </h1><br>
+
+              <h4 class="price">preparation time <span><%= recipe.prepTime %></span> <span class="glyphicon glyphicon-hourglass"></span></h4>
+
+					<strong>ingredients</strong>
+          	<p class="product-description"> <%= recipe.ingredients %> </p>
+            <br>
+            <strong>instructions</strong>
+            <p><%= recipe.instructions %></p>
+
+						<p class="vote">cooking time <strong><%= recipe.cookTime %></strong></p>
+            <div class="owner"><h4>  By:  <%= recipe._creator.username %></h4></div>
 						</div>
-					</div>
+            </div>
 				</div>
 			</div>
 		</div>

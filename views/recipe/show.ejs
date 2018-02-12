@@ -6,10 +6,10 @@
 				<div class="wrapper row">
 					<div class="preview col-md-6">
             <div class="leftContent">
-							<div class="imageFromShow">
- 							<img src="<%= recipe.pic_path %>" alt="<%= recipe.pic_name %>" />
-						 </div>
-       <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
+
+								<img class="pictureContainer"  src="<%= recipe.pic_path %>" alt="<%= recipe.pic_name %>" /><br>
+
+      <a class="btn backer-btn" href="/recipeBook">back to the recipe book</a>
             <div class="action">
               <% if (String(foundUser) === String(recipe._creator)) { %>
                <a class="btn backer-btn" href="/recipe/<%= recipe._id%>/edit">Edit This recipe</a> <br>
